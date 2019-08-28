@@ -1,0 +1,41 @@
+{
+  "name": "@bnb/card",
+  "version": "1.6.0",
+  "description": "Becode Exe",
+  "main": "./build.js",
+  "bin": {
+    "bitandbang": "./build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedrickevers"
+  },
+  "homepage": "https://bnb.im",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "node build.js",
+    "dev": "npm run build && node ./bin/card.js",
+    "lint": "standard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "devDependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "asciify-image": "^0.1.5",
+    "terminal-image": "^0.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.registry.github.com/"
+  }
+}
