@@ -50,23 +50,29 @@ var image = (async () => {
 
 
 // Put all our output together into a single variable so we can use boxen effectively
-const output =
-  image +
-  web +
-  newline +
-  newline +
-  heading +
-  newline +
-  newline +
-  working +
-  newline +
-  twittering +
-  newline +
-  githubing +
-  newline +
-  newline +
+async function generateImage() {
+  output = await terminalImage.file('ck.jpg') +
+    web +
+    newline +
+    newline +
+    heading +
+    newline +
+    newline +
+    working +
+    newline +
+    twittering +
+    newline +
+    githubing +
+    newline +
+    newline +
+    carding;
 
-  carding;
+  return output
+}
 
+async function displayBox() {
+  // Put all our output together into a single variable so we can use boxen effectively
+  console.log(chalk.green(boxen(await generateImage(), options)))
+}
 
-console.log(chalk.green(boxen(output, options)))
+displayBox()
